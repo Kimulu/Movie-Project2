@@ -140,14 +140,14 @@ news_parameters= {
     "date":f"{today}",
 
 }
-if now==20:
+if now==21:
     response = requests.get("http://api.mediastack.com/v1/news", params=news_parameters)
     news_data = response.json()
     news_list = news_data["data"][::5]
 
 
 for i in news_list:
-    if now == 20:
+    if now == 21:
         new_article = NewsArticles(    
                 title=i["title"],
                 description =i["description"],
